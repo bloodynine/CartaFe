@@ -1,0 +1,31 @@
+
+<div (click)="flipCard()" class="card carta-card">
+    @if(card.isFlipped && card.face !== undefined){
+        <div class="corner start-corner is-size-3" [class]="'suit-' + card.suit">
+            {{card.face}}
+        </div>
+        <div class="center" [class]="'suit-' + card.suit">
+            @switch (card.suit){
+                @case (0) {
+                    <lucide-angular [img]="SpadeIcon" class="pip"></lucide-angular>
+                }
+                @case (1){
+                    <lucide-angular [img]="HeartIcon" class="pip"></lucide-angular>
+                }
+                @case (2){
+                    <lucide-angular [img]="DiamondIcon" class="pip"></lucide-angular>
+                }
+                @case (3){
+                    <lucide-angular [img]="ClubIcon" class="pip"></lucide-angular>
+                }
+            }
+        </div>
+        <div class="corner end-corner is-size-3" [class]="'suit-' + card.suit">
+            {{card.face}}
+        </div>
+    } @else {
+        <div class="card-back">
+            <img src="/assets/back-black.png" alt=""> 
+        </div>
+    } 
+</div>

@@ -1,0 +1,13 @@
+
+
+<div class="container">
+@if (game !== undefined){
+    <div class="fixed-grid" [ngClass]="columns">
+        <div class="grid" >
+           @for(card of cards; track card.id) {
+               <app-carta-card [card]="card"></app-carta-card>
+           }
+        </div>
+    </div>
+}
+</div>

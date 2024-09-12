@@ -1,0 +1,22 @@
+.state {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: black;
+    font-weight: bolder;
+}
+.suit-1, .suit-2 {
+    color: #ed4539;
+}
+
+.suit-3, .suit-0  {
+    color: #494848;
+}
+
+.disabled {
+    background-color: rgba(50, 50, 50, .2);
+}
+
+.promised {
+    background-color: rgba(0, 189, 3, .2);
+}

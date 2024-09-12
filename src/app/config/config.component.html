@@ -1,0 +1,51 @@
+<div class="configContainer">
+    <div class="card">
+        <div class="card-content">
+            <form [formGroup]="configForm" (ngSubmit)="createGame()">
+            <div class="field">
+                <label class="label">
+                    Number of Rows
+                </label>
+                <div class="control">
+                    <input type="text" class="input" placeholder="rows" formControlName="rows">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">
+                Number of Columns
+                </label>
+            </div>
+            <div class="control">
+                <input type="text" class="input" placeholder="columns" formControlName="columns">
+            </div>
+                
+            <div class="field">
+            </div>
+                <div class="control">
+                    <div class="button is-primary">
+                        <button [disabled]="this.configForm.invalid">Create Game</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="gridwrapper">
+    <div class="box">
+        <p>
+            Click on a card to toggle its state. A card can either be Enabled, Disabled (
+            <lucide-angular [img]="DisabledIcon" [size]="10"></lucide-angular>
+            ) or Promised (
+            <lucide-angular [img]="PromisedIcon" [size]="10"></lucide-angular>
+            ) (meaning it will be required to be included).
+        </p>    
+    </div>
+    
+    <div class="grid">
+        @for (card of cards; track card){
+            <div class="cell">
+                <app-config-card [face]="card.face!" [suit]="card.suit!" [(state)]="card.state"></app-config-card>
+            </div>
+        }
+    </div>   
+</div>

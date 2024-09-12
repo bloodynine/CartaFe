@@ -1,0 +1,40 @@
+<div (click)="toggleState()" class="wrapper">
+    <div class="card">
+        <div class="card-content" [class]="'suit-' + suit" [class.disabled]="state === CardConfigState.Disabled" [class.promised]="state === CardConfigState.Promised">
+            @if(state != CardConfigState.Enabled){
+                <div class="state">
+                    @switch (state){
+                        @case (CardConfigState.Disabled){
+                            <lucide-angular [img]="DisabledIcon" [size]="20"></lucide-angular>
+                        }
+                        @case (CardConfigState.Promised){
+                            <lucide-angular [img]="PromisedIcon" [size]="20"></lucide-angular>
+                        } 
+                    }
+                        
+                </div>
+            }
+            <div class="columns">
+                 <div class="column">
+                     {{face}}
+                 </div>   
+                <div class="column">
+                    @switch (suit){
+                        @case (0) {
+                            <lucide-angular [img]="SpadeIcon" [size]="20"></lucide-angular>
+                        }
+                        @case (1){
+                            <lucide-angular [img]="HeartIcon" [size]="20"></lucide-angular>
+                        }
+                        @case (2){
+                            <lucide-angular [img]="DiamondIcon" [size]="20"></lucide-angular>
+                        }
+                        @case (3){
+                            <lucide-angular [img]="ClubIcon" [size]="20"></lucide-angular>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

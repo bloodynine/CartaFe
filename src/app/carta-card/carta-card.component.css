@@ -1,0 +1,73 @@
+.carta-card {
+    width: 200px;
+    height: 300px;
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .carta-card {
+        width: 50px;
+        height: 75px;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .corner {
+        font-size: .6em !important;
+    }
+}
+
+.drawnCard {
+    display: flex;
+    font-size: large;
+    padding-top: 2em;
+}
+.drawnCard > div {
+    /*padding-left: 1em;*/
+}
+.decks > li {
+    list-style-type: none;
+}
+
+.suit-1, .suit-2 {
+    color: #ed4539;
+}
+
+.suit-3, .suit-0  {
+    color: #494848;
+}
+
+.center {
+    width: 100%;
+    align-self: center;
+    vertical-align: center;
+    text-align: center;
+}
+
+.corner {
+    font-weight: bold;
+    padding: .7em;
+}
+
+.start-corner {
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.end-corner {
+    display: inline-block;
+    align-self: flex-end;
+    transform: rotate(180deg);
+}
+
+.activeHeader {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.deleteBtn {
+    margin-top: auto;
+    margin-bottom: auto;
+}

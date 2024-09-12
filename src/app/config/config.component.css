@@ -1,0 +1,16 @@
+.configContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+.gridwrapper {
+    padding-top: 3em;
+    width: 90vw;
+    margin-left: 5vw;
+}
+
+.gridwrapper .box {
+    text-align: center;
+}
