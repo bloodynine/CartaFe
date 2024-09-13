@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {GameConfig, Game, NewGame} from "./Models/Game";
 import {BehaviorSubject, lastValueFrom} from "rxjs";
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
   
-  baseUrl = 'https://localhost:7035/'
+  baseUrl = environment.apiUrl;
   
   public game: BehaviorSubject<Game> = new BehaviorSubject<Game>({} as Game);
   

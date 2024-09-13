@@ -1,14 +1,21 @@
 .carta-card {
     width: 200px;
     height: 300px;
-    display: flex;
+    display: grid;
+}
+
+.kerkSucks {
+    justify-self: center;
+}
+
+.value {
+    padding-top: 20%;
 }
 
 @media only screen and (max-width: 600px) {
     .carta-card {
         width: 50px;
         height: 75px;
-        display: flex;
     }
 }
 
@@ -51,8 +58,6 @@
 }
 
 .start-corner {
-    display: inline-block;
-    align-self: flex-start;
 }
 
 .end-corner {
