@@ -5,3 +5,7 @@ This is the front-end code to support https://www.carta.quest/. A web app that a
 - Exclude Certain card draws
 - Guarantee certain card draws
 - Play your game anywhere you have a web browser. 
+
+## Screenshots
+![sreenshot1](https://github.com/bloodynine/CartaFe/blob/main/carta1.png)
+![screenshot2](https://github.com/bloodynine/CartaFe/blob/main/carta2.png)
